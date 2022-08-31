@@ -1,0 +1,165 @@
+<html>
+
+<head>
+  <title>HiWorld Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div id="root">
+    <div id="landingPage">
+      <div class="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+        <div class="max-w-lg mx-auto">
+          <h1 class="text-2xl font-bold text-center text-indigo-600 sm:text-3xl">
+            HiWorld Project
+          </h1>
+
+          <p class="max-w-md mx-auto mt-4 text-center text-gray-500">
+            Welcome to my basic login project using basic javascript from my
+            basic javascript series
+          </p>
+
+          <div id="formLogin" class="max-w-md mx-auto mt-8 mb-0 space-y-4">
+            <div>
+              <label for="email" class="sr-only">Username</label>
+
+              <div class="relative">
+                <input type="text" id="userInput" class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+                  placeholder="Enter Username" />
+
+                <span class="absolute inset-y-0 inline-flex items-center right-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <label for="password" class="sr-only">Password</label>
+              <div class="relative">
+                <input type="password" id="passInput"
+                  class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm" placeholder="Enter Password" />
+
+                <span class="absolute inset-y-0 inline-flex items-center right-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <button onclick="onLogin()"
+                class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg">
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="formRegister" class="max-w-md mx-auto mt-8 mb-0 space-y-4">
+          <div>
+            <label for="email" class="sr-only">Username</label>
+
+            <div class="relative">
+              <input type="text" id="userRegister" class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+                placeholder="Enter Username" />
+
+              <span class="absolute inset-y-0 inline-flex items-center right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <div class="relative">
+              <input type="password" id="passRegister"
+                class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm" placeholder="Enter Password" />
+
+              <span class="absolute inset-y-0 inline-flex items-center right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">
+              Already Have an Account?
+              <a class="underline" onclick="toLogin()">Sign In</a>
+            </p>
+
+            <button onclick="onRegister()"
+              class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="started">
+    <aside class="overflow-hidden bg-yellow-100 sm:grid sm:grid-cols-2 sm:items-center">
+      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div class="max-w-xl mx-auto text-center sm:text-left">
+          <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+            Welcome to HiWorld Project
+          </h2>
+
+          <p class="hidden text-gray-700 md:mt-4 md:block" id="nameUser">
+          </p>
+
+          <div class="mt-4 md:mt-8">
+            <a href="https://www.instagram.com/inihikam/" class="relative inline-block group focus:outline-none focus:ring focus:ring-yellow-400">
+              <span
+                class="relative z-10 block px-12 py-3 text-sm font-medium text-white bg-gray-900 rounded transition group-hover:scale-105">
+                My Instagram
+              </span>
+  
+              <span
+                class="absolute inset-0 rounded transition scale-105 bg-gray-900/25 -rotate-3 group-hover:rotate-0"></span>
+            </a>
+          </div>
+          <div class="mt-4 md:mt-8">
+            <a href="" onclick="onLogout()" class="relative inline-block group focus:outline-none focus:ring focus:ring-yellow-400">
+              <span
+                class="relative z-10 block px-12 py-3 text-sm font-medium text-white bg-gray-900 rounded transition group-hover:scale-105">
+                Logout
+              </span>
+  
+              <span
+                class="absolute inset-0 rounded transition scale-105 bg-gray-900/25 -rotate-3 group-hover:rotate-0"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <img alt="#" src="image.jpg"
+        class="object-cover w-full h-full sm:h-[calc(100%_-_2rem)] md:h-[calc(100%_-_4rem)] sm:rounded-tl-[30px] md:rounded-tl-[60px] sm:self-end border-l-4 border-t-4 border-gray-900" />
+    </aside>
+
+  </div>
+  </div>
+
+  <script src="register.js" type="application/javascript"></script>
+</body>
+
+</html>
